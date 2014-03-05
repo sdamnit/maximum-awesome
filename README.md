@@ -11,6 +11,19 @@ peace-loving hippies. Built for Mac OS X.
 * Awesome syntax highlighting with the [Solarized color scheme](http://ethanschoonover.com/solarized)
 * Want to know more? [Fly Vim, First Class](http://corner.squareup.com/2013/08/fly-vim-first-class.html)
 
+## What did sdamnit change?
+Added a few local packages:
+* [Vim Org Mode](https://github.com/jceb/vim-orgmode) - never leave home without it.
+* [Recover.vim](https://github.com/chrisbra/Recover.vim) - lifesaver
+* [SpeedDating](https://github.com/tpope/vim-speeddating) - just too convenient
+* Tools for python development:
+  * [Flake 8](https://github.com/andviro/flake8-vim)
+  * [Python Mode](https://github.com/klen/python-mode)
+* Optionally synchronize-panes in tmux with `<C-a s>`
+* Easy to remember plane splitting with `|` and `-`
+
+
+
 ### vim
 
 * `,d` brings up [NERDTree](https://github.com/scrooloose/nerdtree), a sidebar buffer for navigating and manipulating files
