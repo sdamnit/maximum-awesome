@@ -1,0 +1,6 @@
+" Additional bundles for orgmode and python dev
+Bundle 'andviro/flake8-vim'
+Bundle 'klen/python-mode'
+Bundle 'jceb/vim-orgmode'
+Bundle 'tpope/vim-speeddating'
+Bundle 'chrisbra/Recover.vim'

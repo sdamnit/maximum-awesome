@@ -31,3 +31,36 @@ function! s:RemoveConflictingAlignMaps()
 endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+" Steve's customizations
+" ---- Disable autoindent in current file with F7
+nnoremap <F7> :setl noai nocin nosi inde=<CR>
+let maplocalleader="_"
+" ---- PythonMode
+let g:pymode_lint_write = 0
+let g:pymode_run_key = 'R'
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+let g:pymode_lint_checker = 'pylint,pyflakes,pep8,mccabe'
+let g:pymode_lint_onfly = 0
+" ---- rope
+let g:pymode_rope_global_prefix = '<leader>p'
+let g:pymode_rope_local_prefix = '<localleader>r'
+" ---- vim-flake8  # change this up since we now use flake8-vim
+"autocmd FileType python map <buffer> <leader>8 :call Flake8()<CR>
+"let g:flake8_max_complexity=8
+" ---- Omni Complete
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+" ---- Fancy folding
+nnoremap <space> za
+vnoremap <space> zf
+
+" Vim Org Mode
+let g:org_todo_keywords = [['TODO', 'WORKING', '|', 'DONE'],
+    \ ['CANCELED']]
+let g:org_todo_keyword_faces = [['TODO', 'magenta'],['WAITING', 'blue'],['DONE', 'yellow'],['CANCELED', 'red']]
+let g:org_indent = 0
+" ---- SpeedDating. Resolve conflict with tmux
+nmap  <C-C>     <Plug>SpeedDatingUp
